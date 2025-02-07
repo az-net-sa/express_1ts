@@ -1,0 +1,71 @@
+<!-- python3 -m http.server -->
+<!DOCTYPE html>
+<html>
+<head> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta charset="utf-8" />   
+    <title>موقع عبدالعزيز</title>
+
+</head>
+<body>
+    <!-- Put your HTML code here -->
+    <h1>  اعرف السورة من الآية</h1>
+    <div id="askmeContiner">
+        <div id="selects" style="display: flex; justify-content: space-around; display: none;">
+            <select name="SelectLevel" id="SelectLevel" > 
+                <option value="0" >جزء عم</option>
+                <option value="1" >العشر الأخير</option>
+                <option value="2" >الخمس الأخير</option>
+                <option value="3" >الثلث الأخير</option>
+                <option value="4" >النصف الأخير</option>
+                <option value="5" >القرآن كاملا</option>
+        
+        
+            </select>
+            <select name="SelectOptions" id="SelectOptions">
+                <option value="3">ثلاث خيارات</option>
+                <option value="4">أربع خيارات</option>
+                <option value="5">خمس خيارات</option>
+                <option value="6">ست خيارات</option>
+        
+            </select>
+
+            <select name="selectTime" id="selectTime">
+                <option value="5">5 ثواني</option>
+                <option value="10">10 ثواني</option>
+                <option value="15">15 ثانية</option>
+                <option value="20">20 ثانية</option>
+        
+            </select>
+        </div>
+            <button id="askMe" onclick="askmepleae()" >أعطني آيه</button>
+        
+
+    </div>
+
+    <div id="AyahContainer">
+
+
+
+
+
+    </div>
+
+    <div id="answerContainer">
+
+
+    </div>
+
+    <div id="bar-container">
+        <div id="bar">
+            
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>

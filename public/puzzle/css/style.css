@@ -1,0 +1,177 @@
+
+@font-face {
+    font-family: naskh;
+    src: url(../fonts/UthmanTN.ttf);
+}
+@font-face {
+    font-family: naskhBold;
+    src: url(../fonts/UthmanTNB.ttf);
+}
+@font-face { 
+    font-family: Symbols1;
+    src: url(../fonts/Symbols1.otf);
+}
+/* 
+source :https://fonts.qurancomplex.gov.sa/wp02/%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%ac%d8%a7%d8%aa/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #222831;
+
+}
+h1 {
+    font-family: Mysymbols;
+    color: white;
+}
+h1, #askMe {
+    text-align: center;
+}
+select {
+    color: #000000;
+    background-color: #00ADB5;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+#askmeContiner {
+    display: block;
+    margin-bottom: 40px;
+}
+
+
+#AyahContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #ffffff;
+    background-color:#393E46;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+    min-height: 500px;
+    visibility: hidden;
+}
+
+#answerContainer {
+    background-color:#00ADB5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    visibility: hidden;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+    min-height: 300px;
+}
+
+#askMe {
+    display: block;
+    margin: 0 auto;
+    padding: 40px 100px;
+    background-color: #1a2028;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    margin-top: 15px;
+    border-radius: 22px;
+}
+
+#askMe:hover {
+    background-color: #393E46;
+
+}
+
+.basmlahp{
+text-align: center;
+margin: 0px 30% 20px 30%;
+font-family: Symbols1 ;
+font-size : 75px;
+font-weight: 50;;
+}
+
+.Ayahp{
+text-align: center;
+margin: 0px 25px 30px 25px;
+font-family: naskh;
+font-size : 32px;
+font-weight: 800;
+
+}
+
+.answerbutton {
+
+    display:inline-block; 
+
+    padding: 25px ;
+    width: 80%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #222831;
+    color: white;
+    font-size: 26px;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+.answerbutton:hover {
+    background-color: #393E46;
+    
+}
+
+#bar-container {
+    display: flex;
+    margin-top : 20px;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100%;
+    background-color: #080101;
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#bar {
+    background-color: #007f85;
+    height: 65%;
+    width : 0%;
+    margin: 5px;
+    border-radius: 12px;
+}
+
+@media only screen
+and (min-width: 550px) { 
+/* For disktops with screen size 550px or more */
+    .Ayahp  {
+        font-size: 40px;
+    }
+    .basmlahp {
+        font-size: 75px;
+    }
+    
+}
+
+

@@ -21,15 +21,19 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.use( '/subdir' ,express.static(path.join(__dirname, '/public')));
+app.use( '/puzzle' ,express.static(path.join(__dirname, '/public' , 'puzzle')));
 
 // routes 
 app.use('/' , require('./routes/root'));
 app.use('/subdir', require('./routes/subdir'));
+app.use('/puzzle', require('./routes/puzzle'));
 app.use('/regester', require('./routes/regester'));
 app.use('/auth', require('./routes/auth'));
 
 // api 
 app.use('/employees', require('./routes/api/employees'));
+app.use('/puzzle-api', require('./routes/api/puzzle'));
+app.use('/leaderboard-api', require('./routes/api/leaderboard'));
 
 app.all('*', (req, res) => {
     res.status(404);

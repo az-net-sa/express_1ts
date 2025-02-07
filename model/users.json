@@ -17,6 +17,7 @@
   },
   {
     "username": "ahmed8",
-    "password": "$2b$10$Horzo38ZElrRv3aBPvdiRubavw2REFgLm6V8RlEIfDugDuak5Rulu"
+    "password": "$2b$10$Horzo38ZElrRv3aBPvdiRubavw2REFgLm6V8RlEIfDugDuak5Rulu",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFobWVkOCIsImlhdCI6MTczODk0NzgyMSwiZXhwIjoxNzM5MDM0MjIxfQ.5o8yr5bI3sZSKcMGaGLp7pU4qgAZ6BsN53V8d0f12mk"
   }
 ]
