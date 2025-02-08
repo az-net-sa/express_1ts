@@ -8,5 +8,7 @@ router.route('/')
     .post(leaderboard.postNewScore);
 
 
-
+router.route('/topten')
+    .get(leaderboard.TopTen);
+    
 module.exports = router;

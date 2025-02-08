@@ -30,4 +30,9 @@ const postNewScore = (req, res) => {
     });
 };
 
-module.exports = { getAll, postNewScore };
+const TopTen = (req, res) => {
+    const TopTen = data.sort((a, b) => b.score - a.score).slice(0, 10);
+    res.json(TopTen);
+};
+
+module.exports = { getAll, postNewScore , TopTen };

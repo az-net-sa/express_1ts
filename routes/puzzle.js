@@ -10,7 +10,7 @@ router.get('^/$|/index(.html)?', (req, res) => {
 } )
 
 router.get('/leaderboard(.html)?', (req, res) => {
-    res.sendFile(path.join(__dirname, '..' , 'views' , 'puzzle' , 'test.html'));
+    res.sendFile(path.join(__dirname, '..' , 'views' , 'puzzle' , 'leaderboard.html'));
     console.log('subdir text page loaded');
 } )
 

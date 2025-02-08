@@ -8,6 +8,7 @@ var max = 0;
 var UserGotItRight = false;
 var answerbutton = document.querySelectorAll('.answerbutton');
 let quranData = null;
+let Username = "";
 
 const askmebutton = document.getElementById("askMe");
 const barContainer = document.getElementById("bar-container");
@@ -15,6 +16,7 @@ const askmeContiner = document.getElementById("askmeContiner");
 const Timebox = document.getElementById("selectTime");
 const answerContainer = document.getElementById("answerContainer");
 const barDiv = document.getElementById("bar");
+const UsernameInput = document.getElementById("inputName");
 
 barContainer.style.display = 'none';
 reSetBarSpeed();
@@ -78,9 +80,14 @@ function bar() {         //  create a loop function
                 element.disabled = true;
 
             });
+                    if (UsernameInput.value) {
+                    Username = UsernameInput.value;
+                    } else {
+                    Username = "مجهول";
+                    }
                     // if user didn't get the right answer in time
                     var Result = {
-                        "name" : "Anonymous",
+                        "name" : Username,
                         "score" : score,
                     }
                     fetch('/leaderboard-api', {
