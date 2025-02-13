@@ -34,21 +34,28 @@ const handleLogin = async (req, res) => {
             const accessToken = jwt.sign({ username }, 
                 process.env.ACCESS_TOKEN_SECRET, 
                 { expiresIn: '30s' });
+            // or you can write it like this:
+            // const accessToken = jwt.sign(
+            //     {"username" : user.username},
+            //     process.env.ACCESS_TOKEN_SECRET,
+            //     { expiresIn: '30s' }
+            // );
 
             const refreshToken = jwt.sign({ username },
                 process.env.REFRESH_TOKEN_SECRET,
                 { expiresIn: '1d' });    
+            // or you can also write it as ubove
             
             
-            const otherUsers = usersDB.users.filter(person => person.username !== username);
-            const currentUser ={ ...user, refreshToken };
+            const otherUsers = usersDB.users.filter(person => person.username !== user.username);
+            const currentUser = { ...user, refreshToken };
             const updatedUsers = [...otherUsers, currentUser];
             usersDB.setUsers(updatedUsers);
-            await fsPromises.writeFile(path.join(__dirname, '../model/users.json'), JSON.stringify(usersDB.users, null, 2));
+            await fsPromises.writeFile(path.join(__dirname, '..' , 'model' , 'users.json'), JSON.stringify(usersDB.users, null, 2));
 
-            console.log(accessToken , refreshToken);
+            // console.log(accessToken , refreshToken);
            
-            res.cookie('jwt', refreshToken, {  httpOnly: true, maxAge: 24 * 60 * 60 * 1000 });
+            res.cookie('jwt', refreshToken, {  httpOnly: true, maxAge: 24 * 60 * 60 * 1000 /* 1 day */ });
             res.status(200).json({ accessToken});
         } else {
             res.status(401).send('Invalid password');
