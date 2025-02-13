@@ -13,7 +13,10 @@ const verifyJWT = (req, res, next) => {
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded ) => {
         if (err) 
             return res.status(403).send('Forbidden');
-        req.user = decoded.username;        
+        req.user = decoded.username;
+        next();        
 
     });
 }
+
+module.exports = verifyJWT;
