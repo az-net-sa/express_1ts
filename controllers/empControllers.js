@@ -2,7 +2,7 @@ const data = {};
 data.employees = require('../model/employees.json');
 
 
-const getAllEmps = (req, res) =>  (req, res) => {
+const getAllEmps = (req, res) => {
     res.json(data.employees);
 }
 

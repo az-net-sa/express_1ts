@@ -55,7 +55,7 @@ const handleLogin = async (req, res) => {
 
             // console.log(accessToken , refreshToken);
            
-            res.cookie('jwt', refreshToken, {  httpOnly: true, maxAge: 24 * 60 * 60 * 1000 /* 1 day */ });
+            res.cookie('jwt', refreshToken, {  httpOnly: true, sameSite: 'None' , secure:true,   maxAge: 24 * 60 * 60 * 1000 /* 1 day */ });
             res.status(200).json({ accessToken});
         } else {
             res.status(401).send('Invalid password');
